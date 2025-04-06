@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@config '../tailwind.config.js';
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-inter text-base text-primary-dark bg-primary-extra-light;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-primary-dark font-un-bounded;
+  }
+
+  p {
+    @apply text-primary-medium;
+  }
+  button {
+    @apply hover:cursor-pointer;
+  }
+}
