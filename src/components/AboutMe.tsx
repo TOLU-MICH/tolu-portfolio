@@ -134,11 +134,11 @@ const AboutMe = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="flex items-center gap-6  font-un-bounded uppercase">
+          <span className="font-un-bounded uppercase">
             <p className="text-lg md:text-2xl text-white">Resume</p>
-            <p className="font-medium text-[10px] md:text-sm text-white">
+            {/* <p className="font-medium text-[10px] md:text-sm text-white">
               Click to view my detailed resume
-            </p>
+            </p> */}
           </span>
         </a>
       </div>
