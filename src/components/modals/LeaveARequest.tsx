@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Close, LinkedInIcon } from "../../assets/Svg";
+import { motion } from "framer-motion";
 
 const LeaveARequest = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,12 +10,15 @@ const LeaveARequest = () => {
 
   return (
     <>
-      <button
-        className="px-4 md:px-15 hover:bg-primary-dark/90 text-white rounded-xl py-3 bg-primary-dark text-center font-un-bounded font-medium text-xs"
+      <motion.button
+        className="px-4 md:px-15 glass-card text-white rounded-xl py-3 bg-primary-dark text-center font-un-bounded font-medium text-xs"
         onClick={() => setIsOpen(true)}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ duration: 0.2 }}
       >
         Leave a request
-      </button>
+      </motion.button>
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-[1000000]" onClose={toggleModal}>

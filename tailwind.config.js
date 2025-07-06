@@ -3,7 +3,6 @@ const colors = require("tailwindcss/colors");
 const withMT = require("@material-tailwind/react/utils/withMT");
 module.exports = withMT({
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-
   theme: {
     borderWidth: {
       DEFAULT: "1px",
@@ -17,8 +16,10 @@ module.exports = withMT({
       white: colors.white,
       black: colors.black,
       primary: {
-        extraLight: "#F9FAFA",
+        extraLight: "#f9fafa",
+        darLight: "#0a0a0a",
         light: "#F3F2F2",
+        mediumLight: "#DCE0E5",
         medium: "#7F7F7F",
         dark: "#1C1B1B",
       },
@@ -46,17 +47,17 @@ module.exports = withMT({
       black: "800",
     },
 
-    // screens: {
-    //   "2xs": "320px",
-    //   xs: "420px",
-    //   sm: "640px",
-    //   md: "768px",
-    //   lg: "1024px",
-    //   xl: "1280px",
-    //   "2xl": "1440px",
-    //   "3xl": "1536px",
-    //   "4xl": "1920px",
-    // },
+    screens: {
+      "2xs": "320px",
+      xs: "420px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1440px",
+      "3xl": "1536px",
+      "4xl": "1920px",
+    },
     boxShadow: {
       bgShadow: "0px 4px 50px rgba(68, 68, 68, 0.0392157)",
     },

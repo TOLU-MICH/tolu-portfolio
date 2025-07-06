@@ -7,20 +7,31 @@
   }
 
   body {
-    @apply font-inter text-base text-primary-dark bg-primary-extra-light;
+    @apply font-inter text-base text-primary-dark dark:text-primary-light bg-primary-extra-light dark:bg-primary-dar-light;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    @apply text-primary-dark font-un-bounded;
+    @apply font-un-bounded;
   }
 
   p {
-    @apply text-primary-medium;
+    @apply text-primary-medium dark:text-primary-light;
   }
   button {
     @apply hover:cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto px-gutter !max-w-none 4xl:px-contained;
+  }
+
+  /* Note:only use in dark mode */
+  .glass-card {
+    @apply dark:bg-transparent dark:border-white/10 dark:bg-gradient-to-br dark:from-white/5 dark:to-transparent dark:backdrop-blur;
   }
 }
