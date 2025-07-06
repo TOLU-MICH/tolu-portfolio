@@ -67,20 +67,24 @@ const SideBar = () => {
   return (
     <>
       <header
-        className={`lg:hidden px-5 py-6 transition-transform duration-300 sticky top-0 z-10 ${
+        className={`lg:hidden p-5 transition-transform duration-300 sticky top-0 z-10 container ${
           isVisible ? "translate-y-0" : "translate-y-[-100%]"
         }`}
       >
         <nav
-          className={`container shadow-bg-shadow mx-auto border-primary-light px-5 py-6 border rounded-2xl flex justify-between items-center w-full ${
-            isVisible ? "bg-white/50 backdrop-blur-xl" : "bg-white"
+          className={`shadow-bg-shadow mx-auto border-primary-light px-5 py-6 border rounded-2xl flex justify-between items-center w-full ${
+            isVisible
+              ? "bg-white/50 backdrop-blur-xl dark:border-primary-extra-light/10 dark:bg-primary-extra-light/5 dark:backdrop-blur"
+              : "bg-white glass-card"
           }`}
         >
           <Link to={RoutePaths.ROOT}>
-            <p className="text-primary-dark font-medium font-un-bounded text-sm">
+            <h1 className=" font-medium font-un-bounded text-sm">
               Micheal Tolu Francis
-            </p>
-            <p className="text-black text-xs">Front-end Developer</p>
+            </h1>
+            <h2 className="text-black dark:text-white text-xs">
+              Front-end Developer
+            </h2>
           </Link>
           <button
             onClick={toggleSidebar}
@@ -88,12 +92,12 @@ const SideBar = () => {
             aria-label={isOpen ? "Close Menu" : "Open Menu"}
           >
             <span
-              className={`block h-0.5 w-6 bg-black transition-all duration-300 ease-in-out ${
+              className={`block h-0.5 w-6 bg-black dark:bg-white transition-all duration-300 ease-in-out ${
                 isOpen ? "rotate-45 translate-y-1" : "mb-1.5"
               }`}
             />
             <span
-              className={`block h-0.5 w-6 bg-black transition-all duration-300 ease-in-out ${
+              className={`block h-0.5 w-6 bg-black dark:bg-white transition-all duration-300 ease-in-out ${
                 isOpen ? "-rotate-45 -translate-y-0.5" : ""
               }`}
             />
@@ -124,23 +128,23 @@ const SideBar = () => {
             />
             <div
               className={
-                "shadow-bg-shadow bg-white w-full pt-8 pb-6 px-5 relative rounded-t-2xl z-20 space-y-6  transition-all duration-500 " +
+                "shadow-bg-shadow bg-white glass-card  w-full pt-8 pb-6 px-5 relative rounded-t-2xl z-20 space-y-6  transition-all duration-500 ease-linear dark:bg-transparent dark:border-white/10 dark:bg-gradient-to-br dark:from-black/50 dark:to-transparent dark:backdrop-blur " +
                 (isOpen ? "translate-y-0 " : "translate-y-[150%]")
               }
             >
               <button
                 onClick={toggleSidebar}
-                className="outline-none bg-primary-extra-light hover:bg-primary-light border border-primary-light p-2 rounded-full absolute top-4 right-4"
+                className="outline-none bg-primary-extra-light glass-card border border-primary-light p-2 rounded-full absolute top-4 right-4 "
               >
-                <Close />
+                <Close className="fill-primary-dark dark:fill-primary-light" />
               </button>
               <div>
-                <p className="text-primary-dark font-medium font-un-bounded text-sm leading-3">
+                <p className="text-primary-dark dark:text-white font-medium font-un-bounded text-sm leading-3">
                   Micheal Tolu Francis
                 </p>
                 <a
                   href="mail:francismicheal609@gmail.com"
-                  className="text-primary-medium text-xs"
+                  className="text-primary-medium dark:text-primary-light text-xs"
                 >
                   francismicheal609@gmail.com
                 </a>
@@ -151,7 +155,7 @@ const SideBar = () => {
                     key={link.name}
                     href={link.path}
                     onClick={(e) => handleClick(e, link.path)}
-                    className="text-black text-sm block"
+                    className="text-black dark:text-primary-light text-sm block"
                   >
                     {link.name}
                   </a>
@@ -162,7 +166,7 @@ const SideBar = () => {
                   href="https://docs.google.com/document/d/1tVFgayImx4C9-QIvqNNgWnFSUTuOLG0dTIWqIxbJNHQ/edit?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline text-sm text-primary-medium"
+                  className="underline text-sm text-primary-medium dark:text-primary-extra-light"
                 >
                   Resume
                 </a>
@@ -173,9 +177,9 @@ const SideBar = () => {
                     rel="noopener noreferrer"
                     aria-label="Connect with me on LinkedIn"
                     title="LinkedIn Profile"
-                    className="rounded-full border border-primary-dark h-6 w-6 flex items-center justify-center group hover:border-0 transition-colors duration-300 ease-in-out hover:bg-[#0073b1] hover:scale-105"
+                    className="rounded-full border border-primary-dark dark:border-primary-light h-6 w-6 flex items-center justify-center group hover:border-0 transition-colors duration-300 ease-in-out hover:bg-[#0073b1] hover:scale-105"
                   >
-                    <LinkedInIcon className="group-hover:fill-white w-3 h-3" />
+                    <LinkedInIcon className="group-hover:fill-white dark:fill-primary-light w-3 h-3" />
                   </a>
                   <a
                     aria-label="Follow me on Twitter/X"
@@ -183,17 +187,17 @@ const SideBar = () => {
                     href="https://x.com/tolu_mich"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-full border border-primary-dark h-6 w-6 flex justify-center items-center group hover:border-0 transition-colors duration-300 ease-in-out hover:bg-black hover:scale-105"
+                    className="rounded-full border border-primary-dark dark:border-primary-light h-6 w-6 flex justify-center items-center group hover:border-0 transition-colors duration-300 ease-in-out hover:bg-black hover:scale-105"
                   >
-                    <XIcon className="group-hover:fill-white w-3 h-3" />
+                    <XIcon className="group-hover:fill-white dark:fill-primary-light w-3 h-3" />
                   </a>
                   <a
                     aria-label="Send me an email"
                     title="Email Me"
                     href="mailto:francismicheal609@gmail.com"
-                    className="rounded-full border border-primary-dark h-6 w-6 flex justify-center items-center group hover:border-0 transition-colors duration-300 ease-in-out hover:bg-black hover:scale-105"
+                    className="rounded-full border border-primary-dark dark:border-primary-light h-6 w-6 flex justify-center items-center group hover:border-0 transition-colors duration-300 ease-in-out hover:bg-black hover:scale-105"
                   >
-                    <MailIcon className="w-3 h-3 group-hover:fill-white" />
+                    <MailIcon className="w-3 h-3 group-hover:fill-white dark:fill-primary-light" />
                   </a>
                 </span>
               </div>

@@ -1,17 +1,15 @@
-import Hero from "../components/Hero";
-import AboutMe from "../components/AboutMe";
-import Contacts from "../components/Contacts";
-import Projects from "../components/Projects";
+import Hero from "../components/home/Hero";
+import AboutMe from "../components/home/AboutMe";
+import Contacts from "../components/home/Contacts";
+import Projects from "../components/home/Projects";
 
 const Home = () => {
   return (
-    <div className="px-5 w-full">
-      <div className="container w-full mx-auto  ">
-        <Hero />
-        <AboutMe />
-        <Projects />
-        <Contacts />
-      </div>
+    <div className="container ">
+      <Hero />
+      <AboutMe />
+      <Projects />
+      <Contacts />
     </div>
   );
 };
