@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require("tailwindcss/colors");
-const withMT = require("@material-tailwind/react/utils/withMT");
-module.exports = withMT({
+module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     borderWidth: {
       DEFAULT: "1px",
@@ -91,4 +91,4 @@ module.exports = withMT({
     },
   },
   plugins: [],
-});
+};
