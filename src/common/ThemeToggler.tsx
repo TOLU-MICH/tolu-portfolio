@@ -84,13 +84,6 @@ const ThemeToggler = () => {
           </svg>
         </button>
       </div>
-
-      {/* Optional: Display current mode */}
-      <span className="text-sm text-gray-500 dark:text-gray-400 capitalize">
-        {themeMode === "system"
-          ? `System (${isDarkMode ? "Dark" : "Light"})`
-          : themeMode}
-      </span>
     </div>
   );
 };
