@@ -14,7 +14,7 @@ const Projects = () => {
       transition={{ duration: 0.4 }}
     >
       <motion.div
-        className="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-7 mb-3 shadow-bg-shadow bg-white glass-card rounded-2xl xl:p-15 p-10 sm:p-14 relative"
+        className="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-7 mb-3 rounded-2xl  relative"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

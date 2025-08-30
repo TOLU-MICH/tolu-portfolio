@@ -5,7 +5,7 @@ import { RoutePaths } from "../routes/RoutesPath";
 import { ResumeIcon } from "../assets/Svg";
 import { navLinks } from "../utils/navBar";
 import ThemeToggler from "./ThemeToggler";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo.webp";
 
 const NavBar = () => {
   const [isVisible, setIsVisible] = useState(true);

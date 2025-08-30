@@ -1,6 +1,6 @@
 import { motion, Variants } from "framer-motion";
 import { LineIcon, StarIcon } from "../../assets/Svg";
-import avatar from "../../assets/images/hero-avatar.png";
+import avatar from "../../assets/images/hero-avatar.webp";
 
 const Hero = () => {
   const slideUpVariants: Variants = {

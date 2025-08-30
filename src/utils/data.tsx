@@ -1,5 +1,8 @@
 import identigo from "../assets/images/Identigo.webp";
 import pistis from "../assets/images/pisitis.webp";
+import novatus from "../assets/images/novatus.webp";
+import jarvis from "../assets/images/jarvis.webp";
+import diet from "../assets/images/diet.webp";
 import {
   CSSIcon,
   HTMLIcon,
@@ -27,6 +30,30 @@ export const projectData = [
       "An innovative platform for DevOps training, offering hands-on learning and real-world projects",
     link: "https://learn.pististechub.io/",
     img: pistis,
+  },
+  {
+    title: "Novatus AI",
+    type: "AI Security Platform",
+    description:
+      "An AI-driven security software that augments existing video/CCTV systems with real-time threat detection, incident analysis, and instant alerts for homes and businesses; positioned as Europe’s #1 in its category.",
+    link: "https://www.novatus.ai/",
+    img: novatus,
+  },
+  {
+    title: "Jarvis",
+    type: "Digital Product Studio",
+    description:
+      "A studio designing and building digital experiences that matter—offering product design, full-stack development, MVP development, and growth marketing to take ideas from 0→1 and beyond.",
+    link: "https://jarvis-micheals-projects-7fad2d08.vercel.app/",
+    img: jarvis,
+  },
+  {
+    title: "YourDietGame",
+    type: "Nutrition Coaching Platform",
+    description:
+      "A science-based coaching platform by dietitian Stefanos Papanastasiou featuring the ‘Your Diet Game’ method, a Premium 12-week program with full support, and free ebooks plus educational nutrition articles.",
+    link: "https://yourdietgame.gr/",
+    img: diet,
   },
 ];
 

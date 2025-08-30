@@ -3,6 +3,7 @@ import { RoutePaths } from "../routes/RoutesPath";
 import { useEffect, useState } from "react";
 import { navLinks } from "../utils/navBar";
 import { Close, LinkedInIcon, MailIcon, XIcon } from "../assets/Svg";
+import ThemeToggler from "./ThemeToggler";
 
 const SideBar = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -161,7 +162,7 @@ const SideBar = () => {
                   </a>
                 ))}
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between flex-wrap items-center">
                 <a
                   href="https://docs.google.com/document/d/1tVFgayImx4C9-QIvqNNgWnFSUTuOLG0dTIWqIxbJNHQ/edit?usp=sharing"
                   target="_blank"
@@ -170,7 +171,9 @@ const SideBar = () => {
                 >
                   Resume
                 </a>
-                <span className="flex gap-5">
+                <span className="flex gap-5 flex-wrap items-center">
+                  <ThemeToggler />
+
                   <a
                     href="https://www.linkedin.com/in/micheal-francis-frontend-engineer"
                     target="_blank"

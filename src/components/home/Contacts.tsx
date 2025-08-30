@@ -1,8 +1,7 @@
 import { motion, Variants } from "framer-motion";
 
-import contactImage from "../../assets/images/contact.png";
+import contactImage from "../../assets/images/contact.webp";
 import { LinkedInIcon, MailIcon, XIcon } from "../../assets/Svg";
-import LeaveARequest from "../modals/LeaveARequest";
 
 const Contacts = () => {
   // Animation variants with proper typing
@@ -173,7 +172,7 @@ const Contacts = () => {
               variants={fadeInUpVariants}
             >
               Drop me a request on the website or reach out via WhatsApp,
-              Twitter, LinkedIn—whatever works best for you. Let's create
+              Twitter, LinkedIn—, whatever works best for you. Let's create
               something amazing together!
             </motion.p>
 
@@ -181,8 +180,6 @@ const Contacts = () => {
               className="flex flex-col xl:flex-row gap-5"
               variants={fadeInUpVariants}
             >
-              <LeaveARequest />
-
               {/* Social Icons */}
               <motion.span
                 className="flex gap-5"
