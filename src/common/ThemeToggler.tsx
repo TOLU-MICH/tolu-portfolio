@@ -1,7 +1,7 @@
 import useTheme from "../hooks/useTheme";
 
 const ThemeToggler = () => {
-  const { handleToggleTheme: toggleTheme, isDarkMode, themeMode } = useTheme();
+  const { handleToggleTheme: toggleTheme, themeMode } = useTheme();
 
   return (
     <div className="flex items-center my-2 space-x-2">
